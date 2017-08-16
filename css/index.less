@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+@-webkit-keyframes keepTime{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(90deg);
+    }
+}
+.wrapper{
+    position: relative;
+    width: 3.92rem;
+    height: 0.62rem;
+    padding:0 0.05rem;
+    -webkit-border-radius: 0.06rem;
+    -moz-border-radius: 0.06rem;
+    border-radius: 0.06rem;
+    background-color: #fdf055;
+    -webkit-box-shadow: 0.04rem 0.04rem 0 #41001d;
+    -moz-box-shadow: 0.04rem 0.04rem 0 #41001d;
+    box-shadow: 0.04rem 0.04rem 0 #41001d;
+    padding:0 0.03rem;
+    .date{
+        position: absolute;
+        top:0;
+        left:0.06rem;
+        width:4rem;
+        &:after{
+            content: "";
+            display: block;
+            width:0;
+            clear: both;
+        }
+    }
+    .num_bg{
+        float: left;
+        position: relative;
+        margin:0.08rem 0.01rem 0;
+        width:0.33rem;
+        height:0.51rem;
+        border-radius: 0.06rem;
+        background: -webkit-radial-gradient(#3c3b3b 50%,#000);
+        background: -o-radial-gradient(#3c3b3b 50%,#000);
+        background: -moz-radial-gradient(#3c3b3b 50%,#000);
+        background: radial-gradient(#3c3b3b 50%,#000);
+        transform-origin: top center;
+        text-align: center;
+        line-height: 0.51rem;
+        color:#fff;
+        font-size: 0.34rem;
+        font-weight: bold;
+        &:before{
+            content:"";
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            margin:auto;
+            width:100%;
+            height:0.01rem;
+            background-color: #0f0f0f;
+        }        
+    }
+    .character{
+        float: left;
+        font-size:0.19rem;
+        color:#94004a;
+        line-height:0.62rem;
+        margin:0 0.06rem;
+    }
+    .character.day{
+        margin-right:0;
+    }
+}
+
+.rollNumber{
+    position: absolute;
+    width:0.33rem;
+    height:0.51rem;
+    background: url(../images/roll_number.png) no-repeat;
+    background-size: cover;
+    background-position-x: 0 ;
+    background-position-y: 0 ;
+    z-index: 9;    
+}
